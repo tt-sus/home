@@ -30,7 +30,7 @@ export class GdriveService {
             console.log( 'Raw Data', data );
             this.data = data.feed.entry;
             let returnArray: Array<any> = [];
-            for(let i=3;i<this.data.length; i++){
+            for(let i=4;i<this.data.length; i++){
                 returnArray.push(this.data[i].content) 
             }
             

@@ -19,14 +19,15 @@ export class AppComponent {
       .then( ( data ) => {
         console.log( data );
         this.info = data;
-        let n=3;
+        let n=4;
         let lists = _.groupBy(data, function(element, index){
           return Math.floor(index/n);
         });
         lists = _.toArray(lists); 
+        console.log(lists)
         this.projects=[];//Added this to convert the returned object to an array.
            lists.forEach((element,i )=> {
-             let projectObj={name:element[0].$t,link:element[1].$t,url:element[2].$t};
+             let projectObj={name:element[0].$t,link:element[1].$t,url:element[2].$t, info:element[3].$t};
              this.projects.push(projectObj)           
            });
             console.log(this.projects)

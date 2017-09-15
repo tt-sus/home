@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { GdriveService } from './gdrive.service';
 import { Http, HttpModule } from '@angular/http';
+import {PopoverModule} from "ngx-popover";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { Http, HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     HttpModule,
-
+    PopoverModule
   ],
   providers: [GdriveService,],
   bootstrap: [AppComponent]
