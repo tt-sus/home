@@ -16,7 +16,7 @@ import {PopoverModule} from "ngx-popover";
     HttpModule,
     PopoverModule
   ],
-  providers: [GdriveService,],
+  providers: [GdriveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
